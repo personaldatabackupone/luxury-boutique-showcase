@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-luxury-950: #0a0a0a;
+  --color-luxury-900: #121212;
+  --color-luxury-850: #18181b;
+  --color-luxury-800: #242426;
+  --color-luxury-700: #3f3f46;
+  --color-luxury-500: #71717a;
+  --color-luxury-400: #a1a1aa;
+  --color-luxury-300: #d4d4d8;
+  --color-luxury-200: #e4e4e7;
+  --color-luxury-100: #f4f4f5;
+  --color-luxury-50: #fafafa;
+
+  --color-gold-100: #fdf8eb;
+  --color-gold-200: #faedd0;
+  --color-gold-300: #f5dc9f;
+  --color-gold-400: #e9be64;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #b8942b;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+
+  --tracking-luxury: 0.35em;
+  --shadow-luxury-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+  --shadow-luxury-glow: 0 0 35px -5px rgba(212, 175, 55, 0.25);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #f4f4f6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #d4af37;
+    color: #0a0a0a;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e0e11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a30;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Editorial image zoom */
+.zoom-image {
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.group:hover .zoom-image {
+  transform: scale(1.08);
+}
